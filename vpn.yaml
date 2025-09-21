@@ -364,6 +364,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 📹 YouTube
     type: url-test
@@ -373,6 +374,7 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 🤖 AI
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -381,6 +383,7 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 💧 Copilot
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -390,12 +393,14 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 🐬 OneDrive
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🪟 Microsoft
     type: select
@@ -403,6 +408,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🍀 Google
     type: url-test
@@ -412,6 +418,7 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 👨🏿‍💻 GitHub
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -421,6 +428,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 🍎 Apple
     type: select
     proxies:
@@ -428,6 +436,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: ♻️ Speedtest
     type: select
     proxies:
@@ -435,12 +444,14 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 🎵 TikTok
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 🎥 Netflix
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -449,24 +460,28 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 📲 Telegram
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 📢 FCM
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - ♻️ 俄罗斯
+      - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🌍 国外媒体
     type: url-test
@@ -476,18 +491,21 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 🎞️ 国内媒体
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 🐟 漏网之鱼
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -497,6 +515,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🇺🇲 美国节点
       - ♻️ 日本
+      - 🇺🇲 美国无限流量节点
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -507,10 +526,6 @@ proxy-groups:
       - 美国2
       - 美国3
       - 美国4
-      - 美国5
-      - 美国6
-      - 美国7
-      - 美国8
       - 美国9
       - 美国10
       - 美国11
@@ -519,6 +534,16 @@ proxy-groups:
       - 美国14
       - 美国15
       - 美国16
+  - name: 🇺🇲 美国无限流量节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 美国5
+      - 美国6
+      - 美国7
+      - 美国8
   - name: ♻️ 日本
     type: url-test
     url: http://www.gstatic.com/generate_204
