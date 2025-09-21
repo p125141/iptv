@@ -1,4 +1,4 @@
-﻿port: 7890
+port: 7890
 socks-port: 7891
 allow-lan: true
 mode: Rule
@@ -62,26 +62,26 @@ proxies:
   sni: cloud.p1251419696.cloudns.biz                                
   skip-cert-verify: false
 
-- name: 美国5              
+- name: 美国5               
   type: vless
-  server: 107.174.181.219                           
-  port: 65123                                
-  uuid: 1c2e4f49-b377-4c0b-afc3-42897d8a4f37   
+  server: 23.26.156.219                           
+  port: 22404                                
+  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
+  servername: apple.com                 
   reality-opts: 
-    public-key: CoTuLe8I13lS3_sfsMDIJ95HfJrO8Ig0jjNeUdhTJF0    
-    short-id: 86840d6e                    
+    public-key: JA3iMT6_Xo0S98GIbTLB5eoHES3lbZkYrOfSReZZolM    
+    short-id: a8dbd116                    
   client-fingerprint: chrome                  
 
 - name: 美国6                         
   type: vmess
-  server: 107.174.181.219                        
-  port: 2052                                     
-  uuid: 1c2e4f49-b377-4c0b-afc3-42897d8a4f37       
+  server: 23.26.156.219                        
+  port: 2095                                     
+  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
   alterId: 0
   cipher: auto
   udp: true
@@ -89,27 +89,31 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "1c2e4f49-b377-4c0b-afc3-42897d8a4f37-vm"                             
+    path: "3b5a37f3-58e0-4768-a716-246b1177152b-vm"                             
     headers:
       Host: www.bing.com                     
 
-- name: 美国7                            
+
+
+
+
+- name: 美国7                           
   type: hysteria2                                      
-  server: 107.174.181.219                               
-  port: 54568                                
-  password: 1c2e4f49-b377-4c0b-afc3-42897d8a4f37                          
+  server: 23.26.156.219                               
+  port: 49564                                
+  password: 3b5a37f3-58e0-4768-a716-246b1177152b                          
   alpn:
     - h3
   sni: www.bing.com                               
   skip-cert-verify: true
   fast-open: true
 
-- name: 美国8                           
-  server: 107.174.181.219                      
-  port: 17880                                    
+- name: 美国8                            
+  server: 23.26.156.219                      
+  port: 33794                                    
   type: tuic
-  uuid: 1c2e4f49-b377-4c0b-afc3-42897d8a4f37       
-  password: 1c2e4f49-b377-4c0b-afc3-42897d8a4f37   
+  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
+  password: 3b5a37f3-58e0-4768-a716-246b1177152b   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
