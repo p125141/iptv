@@ -64,7 +64,7 @@ proxies:
 
 - name: 美国5               
   type: vless
-  server: 23.26.156.219                           
+  server: 23.26.124.21                           
   port: 22404                                
   uuid: 3b5a37f3-58e0-4768-a716-246b1177152b   
   network: tcp
@@ -79,7 +79,7 @@ proxies:
 
 - name: 美国6                         
   type: vmess
-  server: 23.26.156.219                        
+  server: 23.26.124.21                        
   port: 2095                                     
   uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
   alterId: 0
@@ -99,7 +99,7 @@ proxies:
 
 - name: 美国7                           
   type: hysteria2                                      
-  server: 23.26.156.219                               
+  server: 23.26.124.21                               
   port: 49564                                
   password: 3b5a37f3-58e0-4768-a716-246b1177152b                          
   alpn:
@@ -109,7 +109,7 @@ proxies:
   fast-open: true
 
 - name: 美国8                            
-  server: 23.26.156.219                      
+  server: 23.26.124.21                      
   port: 33794                                    
   type: tuic
   uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
@@ -554,16 +554,6 @@ proxy-groups:
       - 日本2
       - 日本3
       - 日本4
-  - name: ♻️ 俄罗斯
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 俄罗斯1
-      - 俄罗斯2
-      - 俄罗斯3
-      - 俄罗斯4
 
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
