@@ -5,63 +5,6 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: 美国1         
-  type: vless
-  server: 148.135.4.143                           
-  port: 55783                                
-  uuid: 22ca1873-3d21-4ac9-b393-77f941777ec3   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
-  reality-opts: 
-    public-key: w--ybnQeKs338tZfZNo5j5FiVBWeqZiSgYa9v-AkODs    
-    short-id: de8d50be                    
-  client-fingerprint: chrome                  
-
-- name: 美国2                         
-  type: vmess
-  server: cloud.p1251419696.cloudns.biz                        
-  port: 2053                                     
-  uuid: 22ca1873-3d21-4ac9-b393-77f941777ec3       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  servername: cloud.p1251419696.cloudns.biz                    
-  ws-opts:
-    path: "22ca1873-3d21-4ac9-b393-77f941777ec3-vm"                             
-    headers:
-      Host: cloud.p1251419696.cloudns.biz                     
-
-
-- name: 美国3                            
-  type: hysteria2                                      
-  server: cloud.p1251419696.cloudns.biz                               
-  port: 50294                                
-  password: 22ca1873-3d21-4ac9-b393-77f941777ec3                          
-  alpn:
-    - h3
-  sni: cloud.p1251419696.cloudns.biz                               
-  skip-cert-verify: false
-  fast-open: true
-
-- name: 美国4                            
-  server: cloud.p1251419696.cloudns.biz                      
-  port: 39567                                    
-  type: tuic
-  uuid: 22ca1873-3d21-4ac9-b393-77f941777ec3       
-  password: 22ca1873-3d21-4ac9-b393-77f941777ec3   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: cloud.p1251419696.cloudns.biz                                
-  skip-cert-verify: false
-
 - name: 美国5               
   type: vless
   server: 23.26.124.21                           
@@ -93,10 +36,6 @@ proxies:
     headers:
       Host: www.bing.com                     
 
-
-
-
-
 - name: 美国7                           
   type: hysteria2                                      
   server: 23.26.124.21                               
@@ -122,66 +61,7 @@ proxies:
   sni: www.bing.com                                
   skip-cert-verify: true
 
-- name: 美国9               
-  type: vless
-  server: 45.62.103.102                           
-  port: 14756                                
-  uuid: 83b88f98-6480-4575-8cb9-92d3b067a379   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
-  reality-opts: 
-    public-key: 9qNZrrTuoB6krjugN6FO1iiPyvbPbF433q1sgxzMSio    
-    short-id: 455dd375                    
-  client-fingerprint: chrome                  
-
-- name: 美国10                         
-  type: vmess
-  server: 45.62.103.102                        
-  port: 8080                                     
-  uuid: 83b88f98-6480-4575-8cb9-92d3b067a379       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: www.bing.com                    
-  ws-opts:
-    path: "83b88f98-6480-4575-8cb9-92d3b067a379-vm"                             
-    headers:
-      Host: www.bing.com                     
-
-
-
-
-
-- name: 美国11                           
-  type: hysteria2                                      
-  server: 45.62.103.102                               
-  port: 50433                                
-  password: 83b88f98-6480-4575-8cb9-92d3b067a379                          
-  alpn:
-    - h3
-  sni: www.bing.com                               
-  skip-cert-verify: true
-  fast-open: true
-
-- name: 美国12                            
-  server: 45.62.103.102                      
-  port: 55729                                    
-  type: tuic
-  uuid: 83b88f98-6480-4575-8cb9-92d3b067a379       
-  password: 83b88f98-6480-4575-8cb9-92d3b067a379   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: www.bing.com                                
-  skip-cert-verify: true
-- name: 美国13               
+- name: 美国1           
   type: vless
   server: 204.13.153.211                           
   port: 49142                                
@@ -196,7 +76,7 @@ proxies:
     short-id: 68892991                    
   client-fingerprint: chrome                  
 
-- name: 美国14                        
+- name: 美国2                        
   type: vmess
   server: 204.13.153.211                        
   port: 2052                                     
@@ -216,7 +96,7 @@ proxies:
 
 
 
-- name: 美国15                            
+- name: 美国3                            
   type: hysteria2                                      
   server: 204.13.153.211                               
   port: 34862                                
@@ -227,7 +107,7 @@ proxies:
   skip-cert-verify: true
   fast-open: true
 
-- name: 美国16                            
+- name: 美国4                            
   server: 204.13.153.211                      
   port: 15446                                    
   type: tuic
