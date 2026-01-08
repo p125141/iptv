@@ -363,7 +363,6 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 📹 YouTube
@@ -392,14 +391,12 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 🐬 OneDrive
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🪟 Microsoft
@@ -407,7 +404,6 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🍀 Google
@@ -427,7 +423,6 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 🍎 Apple
     type: select
@@ -435,7 +430,6 @@ proxy-groups:
       - DIRECT
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: ♻️ Speedtest
     type: select
@@ -443,14 +437,12 @@ proxy-groups:
       - DIRECT
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 🎵 TikTok
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 🎥 Netflix
     type: url-test
@@ -466,21 +458,18 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 📢 FCM
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-      - ♻️ 俄罗斯
       - 🇺🇲 美国无限流量节点
       - DIRECT
   - name: 🌍 国外媒体
