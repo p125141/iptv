@@ -176,6 +176,65 @@ proxies:
   congestion-controller: bbr
   sni: www.bing.com                                
   skip-cert-verify: true
+- name: 美国9       
+  type: vless
+  server: 156.246.93.6                           
+  port: 49194                                
+  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.yahoo.com                 
+  reality-opts: 
+    public-key: C3pMjXKIwo2AAEGe3Az6-LRItBkS5dqi40kAQz4_t2c    
+    short-id: fb28af98                    
+  client-fingerprint: chrome                  
+
+- name: 美国10                        
+  type: vmess
+  server: 156.246.93.6                        
+  port: 8080                                     
+  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: www.bing.com                    
+  ws-opts:
+    path: "a3032aa9-e881-4fc0-a8c5-c425e32a23a2-vm"                             
+    headers:
+      Host: www.bing.com                     
+
+
+
+
+
+- name: 美国11                            
+  type: hysteria2                                      
+  server: 156.246.93.6                               
+  port: 55530                                
+  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2                          
+  alpn:
+    - h3
+  sni: www.bing.com                               
+  skip-cert-verify: true
+  fast-open: true
+
+- name: 美国12                            
+  server: 156.246.93.6                      
+  port: 56613                                    
+  type: tuic
+  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
+  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
+  alpn: [h3]
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+  sni: www.bing.com                                
+  skip-cert-verify: true
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -352,6 +411,10 @@ proxy-groups:
       - 美国2
       - 美国3
       - 美国4
+      - 美国9
+      - 美国10
+      - 美国11
+      - 美国12
   - name: 🇺🇲 美国无限流量节点
     type: url-test
     url: http://www.gstatic.com/generate_204
