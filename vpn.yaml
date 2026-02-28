@@ -243,7 +243,6 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
       - 🇺🇲 美国无限流量节点
-      - DIRECT
   - name: 📹 YouTube
     type: url-test
     url: http://www.gstatic.com/generate_204
