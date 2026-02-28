@@ -241,7 +241,6 @@ proxy-groups:
     type: url-test
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
   - name: 📹 YouTube
     type: url-test
