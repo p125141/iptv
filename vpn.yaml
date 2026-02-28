@@ -238,7 +238,7 @@ proxies:
 
 proxy-groups:
   - name: 🚀 节点选择
-    type: select
+    type: url-test
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
@@ -344,7 +344,7 @@ proxy-groups:
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 📲 Telegram
-    type: select
+    type: url-test
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
