@@ -5,82 +5,26 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-- name: 美国5               
+- name: 美国1               
   type: vless
-  server: 23.26.124.21                           
-  port: 22404                                
-  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b   
+  server: 204.13.153.211                           
+  port: 36955                                
+  uuid: 81619024-a0c3-4601-9479-d2c49d264437   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: apple.com                 
   reality-opts: 
-    public-key: JA3iMT6_Xo0S98GIbTLB5eoHES3lbZkYrOfSReZZolM    
-    short-id: a8dbd116                    
-  client-fingerprint: chrome                  
-
-- name: 美国6                         
-  type: vmess
-  server: 23.26.124.21                        
-  port: 2095                                     
-  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: www.bing.com                    
-  ws-opts:
-    path: "3b5a37f3-58e0-4768-a716-246b1177152b-vm"                             
-    headers:
-      Host: www.bing.com                     
-
-- name: 美国7                           
-  type: hysteria2                                      
-  server: 23.26.124.21                               
-  port: 49564                                
-  password: 3b5a37f3-58e0-4768-a716-246b1177152b                          
-  alpn:
-    - h3
-  sni: www.bing.com                               
-  skip-cert-verify: true
-  fast-open: true
-
-- name: 美国8                            
-  server: 23.26.124.21                      
-  port: 33794                                    
-  type: tuic
-  uuid: 3b5a37f3-58e0-4768-a716-246b1177152b       
-  password: 3b5a37f3-58e0-4768-a716-246b1177152b   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: www.bing.com                                
-  skip-cert-verify: true
-
-- name: 美国1           
-  type: vless
-  server: 204.13.153.211                           
-  port: 49142                                
-  uuid: a81edf1c-b54b-4097-8279-6c201845eda2   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
-  reality-opts: 
-    public-key: hlL_t326HgYaY7LYMqZFPP04R-_D1MvRAeDDbZ7K-jo    
-    short-id: 68892991                    
+    public-key: LdHFFY8_6JIGamgc2tEIOi3Tg112MXRllc2PcxrByFM    
+    short-id: dc084d8c                      
   client-fingerprint: chrome                  
 
 - name: 美国2                        
   type: vmess
   server: 204.13.153.211                        
-  port: 2052                                     
-  uuid: a81edf1c-b54b-4097-8279-6c201845eda2       
+  port: 2095                                     
+  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
   alterId: 0
   cipher: auto
   udp: true
@@ -88,19 +32,15 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "a81edf1c-b54b-4097-8279-6c201845eda2-vm"                             
+    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
     headers:
       Host: www.bing.com                     
-
-
-
-
 
 - name: 美国3                            
   type: hysteria2                                      
   server: 204.13.153.211                               
-  port: 34862                                
-  password: a81edf1c-b54b-4097-8279-6c201845eda2                          
+  port: 60354                                
+  password: 81619024-a0c3-4601-9479-d2c49d264437                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -109,10 +49,10 @@ proxies:
 
 - name: 美国4                            
   server: 204.13.153.211                      
-  port: 15446                                    
+  port: 47331                                    
   type: tuic
-  uuid: a81edf1c-b54b-4097-8279-6c201845eda2       
-  password: a81edf1c-b54b-4097-8279-6c201845eda2   
+  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
+  password: 81619024-a0c3-4601-9479-d2c49d264437   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
@@ -121,26 +61,46 @@ proxies:
   sni: www.bing.com                                
   skip-cert-verify: true
 
-- name: 美国9       
+
+
+
+
+
+
+
+- name: 美国5
+  type: anytls
+  server: 204.13.153.211
+  port: 59536
+  password: 81619024-a0c3-4601-9479-d2c49d264437
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  sni: www.bing.com
+  skip-cert-verify: true
+
+
+- name: 美国无限1               
   type: vless
-  server: 156.246.93.6                           
-  port: 49194                                
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
+  server: 23.26.124.21                           
+  port: 42034                                
+  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
+  servername: apple.com                 
   reality-opts: 
-    public-key: C3pMjXKIwo2AAEGe3Az6-LRItBkS5dqi40kAQz4_t2c    
-    short-id: fb28af98                    
+    public-key: Swwu4iu487EC1-Nl5tUFpX8vgBAqB_bmF9w6FdEOwyU    
+    short-id: ab5efeee                      
   client-fingerprint: chrome                  
 
-- name: 美国10                        
+- name: 美国无限2                         
   type: vmess
-  server: 156.246.93.6                        
-  port: 8080                                     
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
+  server: 23.26.124.21                        
+  port: 2052                                     
+  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
   alterId: 0
   cipher: auto
   udp: true
@@ -148,31 +108,27 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "a3032aa9-e881-4fc0-a8c5-c425e32a23a2-vm"                             
+    path: "92e5a00b-ba56-4c18-ad43-2f5df0594589-vm"                             
     headers:
       Host: www.bing.com                     
 
-
-
-
-
-- name: 美国11                            
+- name: 美国无限3                            
   type: hysteria2                                      
-  server: 156.246.93.6                               
-  port: 55530                                
-  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2                          
+  server: 23.26.124.21                               
+  port: 25914                                
+  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589                          
   alpn:
     - h3
   sni: www.bing.com                               
   skip-cert-verify: true
   fast-open: true
 
-- name: 美国12                            
-  server: 156.246.93.6                      
-  port: 56613                                    
+- name: 美国无限4                            
+  server: 23.26.124.21                      
+  port: 38889                                    
   type: tuic
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
-  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
+  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
+  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
@@ -180,6 +136,26 @@ proxies:
   congestion-controller: bbr
   sni: www.bing.com                                
   skip-cert-verify: true
+
+
+
+
+
+
+
+
+- name: 美国无限5
+  type: anytls
+  server: 23.26.124.21
+  port: 48955
+  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  sni: www.bing.com
+  skip-cert-verify: true
+
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -336,20 +312,18 @@ proxy-groups:
       - 美国2
       - 美国3
       - 美国4
-      - 美国9
-      - 美国10
-      - 美国11
-      - 美国12
+      - 美国5
   - name: 🇺🇲 美国无限流量节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 美国5
-      - 美国6
-      - 美国7
-      - 美国8
+      - 美国无限1
+      - 美国无限2
+      - 美国无限3
+      - 美国无限4
+      - 美国无限5
 
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
