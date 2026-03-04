@@ -121,61 +121,6 @@ proxies:
   sni: www.bing.com                                
   skip-cert-verify: true
 
-- name: 日本1          
-  type: vless
-  server: 156.246.93.6                           
-  port: 49194                                
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
-  reality-opts: 
-    public-key: C3pMjXKIwo2AAEGe3Az6-LRItBkS5dqi40kAQz4_t2c    
-    short-id: fb28af98                    
-  client-fingerprint: chrome                  
-
-- name: 日本2                        
-  type: vmess
-  server: 156.246.93.6                        
-  port: 8080                                     
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: www.bing.com                    
-  ws-opts:
-    path: "a3032aa9-e881-4fc0-a8c5-c425e32a23a2-vm"                             
-    headers:
-      Host: www.bing.com                     
-
-- name: 日本3                            
-  type: hysteria2                                      
-  server: 156.246.93.6                               
-  port: 55530                                
-  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2                          
-  alpn:
-    - h3
-  sni: www.bing.com                               
-  skip-cert-verify: true
-  fast-open: true
-
-- name: 日本4                            
-  server: 156.246.93.6                      
-  port: 56613                                    
-  type: tuic
-  uuid: a3032aa9-e881-4fc0-a8c5-c425e32a23a2       
-  password: a3032aa9-e881-4fc0-a8c5-c425e32a23a2   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: www.bing.com                                
-  skip-cert-verify: true
 - name: 美国9       
   type: vless
   server: 156.246.93.6                           
@@ -249,7 +194,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🤖 AI
@@ -259,7 +203,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 💧 Copilot
@@ -269,14 +212,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🐬 OneDrive
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
@@ -284,7 +225,6 @@ proxy-groups:
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
@@ -295,7 +235,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 👨🏿‍💻 GitHub
@@ -305,7 +244,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🍎 Apple
@@ -313,7 +251,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: ♻️ Speedtest
@@ -321,14 +258,12 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎵 TikTok
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎥 Netflix
@@ -338,28 +273,24 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 📲 Telegram
     type: url-test
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 📢 FCM
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
@@ -370,7 +301,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎞️ 国内媒体
@@ -378,7 +308,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎯 全球直连
@@ -386,7 +315,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🐟 漏网之鱼
@@ -397,7 +325,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - ♻️ 日本
       - 🇺🇲 美国无限流量节点
   - name: 🇺🇲 美国节点
     type: url-test
@@ -423,16 +350,6 @@ proxy-groups:
       - 美国6
       - 美国7
       - 美国8
-  - name: ♻️ 日本
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 日本1
-      - 日本2
-      - 日本3
-      - 日本4
 
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
