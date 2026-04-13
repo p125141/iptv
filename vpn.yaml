@@ -79,7 +79,73 @@ proxies:
   idle-session-timeout: 30
   sni: www.bing.com
   skip-cert-verify: true
+- name: 美国6               
+  type: vless
+  server: 45.62.103.102                           
+  port: 19079                                
+  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e   
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: apple.com                 
+  reality-opts: 
+    public-key: 1IsMjqPVx99G3ctEB1daJB1c2a1_fOiYl_JX3Ko8j2o    
+    short-id: 95136b2f                      
+  client-fingerprint: chrome                  
 
+- name: 美国7                         
+  type: vmess
+  server: 45.62.103.102                        
+  port: 2052                                     
+  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: www.bing.com                    
+  ws-opts:
+    path: "4f3ac02d-dbd8-485c-a53d-e2157e36fc6e-vm"                             
+    headers:
+      Host: www.bing.com                     
+
+- name: 美国8                            
+  type: hysteria2                                      
+  server: 45.62.103.102                               
+  port: 33598                                
+  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e                          
+  alpn:
+    - h3
+  sni: www.bing.com                               
+  skip-cert-verify: true
+  fast-open: true
+
+- name: 美国9                            
+  server: 45.62.103.102                      
+  port: 21044                                    
+  type: tuic
+  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e       
+  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e   
+  alpn: [h3]
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+  sni: www.bing.com                                
+  skip-cert-verify: true
+
+- name: 美国10
+  type: anytls
+  server: 45.62.103.102
+  port: 38934
+  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  sni: www.bing.com
+  skip-cert-verify: true
 
 - name: 美国无限1               
   type: vless
@@ -313,6 +379,11 @@ proxy-groups:
       - 美国3
       - 美国4
       - 美国5
+      - 美国6
+      - 美国7
+      - 美国8
+      - 美国9
+      - 美国10
   - name: 🇺🇲 美国无限流量节点
     type: url-test
     url: http://www.gstatic.com/generate_204
