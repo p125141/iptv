@@ -83,7 +83,7 @@ proxies:
 
 - name: 美国无限1               
   type: vless
-  server: 23.26.124.21                           
+  server: 108.165.176.219                           
   port: 42034                                
   uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589   
   network: tcp
@@ -98,7 +98,7 @@ proxies:
 
 - name: 美国无限2                         
   type: vmess
-  server: 23.26.124.21                        
+  server: 108.165.176.219                        
   port: 2052                                     
   uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
   alterId: 0
@@ -114,7 +114,7 @@ proxies:
 
 - name: 美国无限3                            
   type: hysteria2                                      
-  server: 23.26.124.21                               
+  server: 108.165.176.219                               
   port: 25914                                
   password: 92e5a00b-ba56-4c18-ad43-2f5df0594589                          
   alpn:
@@ -124,7 +124,7 @@ proxies:
   fast-open: true
 
 - name: 美国无限4                            
-  server: 23.26.124.21                      
+  server: 108.165.176.219                      
   port: 38889                                    
   type: tuic
   uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
@@ -146,7 +146,7 @@ proxies:
 
 - name: 美国无限5
   type: anytls
-  server: 23.26.124.21
+  server: 108.165.176.219
   port: 48955
   password: 92e5a00b-ba56-4c18-ad43-2f5df0594589
   client-fingerprint: chrome
