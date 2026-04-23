@@ -114,24 +114,24 @@ proxies:
       Host: composition-much-reproduce-computing.trycloudflare.com 
 - name: 美国6               
   type: vless
-  server: 45.62.103.102                           
-  port: 19079                                
-  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e   
+  server: 172.245.6.155                           
+  port: 32981                                
+  uuid: 948b48e5-a202-4770-8552-f35a12dac378   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: apple.com                 
   reality-opts: 
-    public-key: 1IsMjqPVx99G3ctEB1daJB1c2a1_fOiYl_JX3Ko8j2o    
-    short-id: 95136b2f                      
+    public-key: EVOLmUT3QIt_acRzISVYjQ6E3sLI0HfLRwHMs8rjjW0    
+    short-id: 0fa35c77                      
   client-fingerprint: chrome                  
 
-- name: 美国7                         
+- name: 美国7                        
   type: vmess
-  server: 45.62.103.102                        
-  port: 2052                                     
-  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e       
+  server: 172.245.6.155                        
+  port: 2086                                     
+  uuid: 948b48e5-a202-4770-8552-f35a12dac378       
   alterId: 0
   cipher: auto
   udp: true
@@ -139,15 +139,16 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "4f3ac02d-dbd8-485c-a53d-e2157e36fc6e-vm"                             
+    path: "948b48e5-a202-4770-8552-f35a12dac378-vm"                             
     headers:
       Host: www.bing.com                     
 
 - name: 美国8                            
   type: hysteria2                                      
-  server: 45.62.103.102                               
-  port: 33598                                
-  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e                          
+  server: 172.245.6.155                               
+  port: 18687
+  ports: 40000-42000
+  password: 948b48e5-a202-4770-8552-f35a12dac378                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -155,11 +156,11 @@ proxies:
   fast-open: true
 
 - name: 美国9                            
-  server: 45.62.103.102                      
-  port: 21044                                    
+  server: 172.245.6.155                      
+  port: 56310                                    
   type: tuic
-  uuid: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e       
-  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e   
+  uuid: 948b48e5-a202-4770-8552-f35a12dac378       
+  password: 948b48e5-a202-4770-8552-f35a12dac378   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
@@ -168,17 +169,56 @@ proxies:
   sni: www.bing.com                                
   skip-cert-verify: true
 
+
+
+
+
+
+
+
 - name: 美国10
   type: anytls
-  server: 45.62.103.102
-  port: 38934
-  password: 4f3ac02d-dbd8-485c-a53d-e2157e36fc6e
+  server: 172.245.6.155
+  port: 19816
+  password: 948b48e5-a202-4770-8552-f35a12dac378
   client-fingerprint: chrome
   udp: true
   idle-session-check-interval: 30
   idle-session-timeout: 30
   sni: www.bing.com
   skip-cert-verify: true
+
+- name: 美国1-1                         
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8443                                     
+  uuid: 948b48e5-a202-4770-8552-f35a12dac378       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  servername: sensor-starts-slight-porcelain.trycloudflare.com                    
+  ws-opts:
+    path: "948b48e5-a202-4770-8552-f35a12dac378-vm"                             
+    headers:
+      Host: sensor-starts-slight-porcelain.trycloudflare.com
+
+- name: 美国2-1                         
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8880                                     
+  uuid: 948b48e5-a202-4770-8552-f35a12dac378       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: sensor-starts-slight-porcelain.trycloudflare.com                    
+  ws-opts:
+    path: "948b48e5-a202-4770-8552-f35a12dac378-vm"                             
+    headers:
+      Host: sensor-starts-slight-porcelain.trycloudflare.com 
 
 - name: 美国无限1               
   type: vless
