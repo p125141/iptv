@@ -188,7 +188,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 
-- name: 美国1-1                         
+- name: 美国3-1                         
   type: vmess
   server: cloudflare-ech.com                        
   port: 8443                                     
@@ -204,7 +204,7 @@ proxies:
     headers:
       Host: sensor-starts-slight-porcelain.trycloudflare.com
 
-- name: 美国2-1                         
+- name: 美国4-1                         
   type: vmess
   server: cloudflare-ech.com                        
   port: 8880                                     
@@ -567,8 +567,8 @@ proxy-groups:
       - 美国8
       - 美国9
       - 美国10
-      - 美国1-1
-      - 美国2-1
+      - 美国3-1
+      - 美国4-1
   - name: 🇺🇲 美国无限流量节点
     type: url-test
     url: http://www.gstatic.com/generate_204
