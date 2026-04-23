@@ -20,7 +20,7 @@ proxies:
     short-id: dc084d8c                      
   client-fingerprint: chrome                  
 
-- name: 美国2                        
+- name: 美国2                         
   type: vmess
   server: 204.13.153.211                        
   port: 2095                                     
@@ -39,7 +39,8 @@ proxies:
 - name: 美国3                            
   type: hysteria2                                      
   server: 204.13.153.211                               
-  port: 60354                                
+  port: 60354
+  ports: 41000-42000
   password: 81619024-a0c3-4601-9479-d2c49d264437                          
   alpn:
     - h3
@@ -79,6 +80,38 @@ proxies:
   idle-session-timeout: 30
   sni: www.bing.com
   skip-cert-verify: true
+
+- name: 美国1-1                        
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8443                                     
+  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  servername: composition-much-reproduce-computing.trycloudflare.com                    
+  ws-opts:
+    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
+    headers:
+      Host: composition-much-reproduce-computing.trycloudflare.com
+
+- name: 美国2-1                         
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8880                                     
+  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: composition-much-reproduce-computing.trycloudflare.com                    
+  ws-opts:
+    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
+    headers:
+      Host: composition-much-reproduce-computing.trycloudflare.com 
 - name: 美国6               
   type: vless
   server: 45.62.103.102                           
