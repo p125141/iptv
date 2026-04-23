@@ -254,6 +254,113 @@ proxies:
   idle-session-timeout: 30
   sni: www.bing.com
   skip-cert-verify: true
+- name: 日本1               
+  type: vless
+  server: 156.246.93.6                           
+  port: 60858                                
+  uuid: 0f2543d4-20a1-43cc-a68f-63cd75021240   
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: apple.com                 
+  reality-opts: 
+    public-key: ZUoCxe1XzZ20OJEKQMQ0hkqxOQQd0iONLaTW92DJcV8    
+    short-id: 49c9fcd8                      
+  client-fingerprint: chrome                  
+
+- name: 日本2                        
+  type: vmess
+  server: 156.246.93.6                        
+  port: 2095                                     
+  uuid: 0f2543d4-20a1-43cc-a68f-63cd75021240       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: www.bing.com                    
+  ws-opts:
+    path: "0f2543d4-20a1-43cc-a68f-63cd75021240-vm"                             
+    headers:
+      Host: www.bing.com                     
+
+- name: 日本3                            
+  type: hysteria2                                      
+  server: 156.246.93.6                               
+  port: 18205
+  ports: 40000-41000
+  password: 0f2543d4-20a1-43cc-a68f-63cd75021240                          
+  alpn:
+    - h3
+  sni: www.bing.com                               
+  skip-cert-verify: true
+  fast-open: true
+
+- name: 日本4                            
+  server: 156.246.93.6                      
+  port: 63365                                    
+  type: tuic
+  uuid: 0f2543d4-20a1-43cc-a68f-63cd75021240       
+  password: 0f2543d4-20a1-43cc-a68f-63cd75021240   
+  alpn: [h3]
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+  sni: www.bing.com                                
+  skip-cert-verify: true
+
+
+
+
+
+
+
+
+- name: 日本5
+  type: anytls
+  server: 156.246.93.6
+  port: 26491
+  password: 0f2543d4-20a1-43cc-a68f-63cd75021240
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  sni: www.bing.com
+  skip-cert-verify: true
+
+- name: 日本1-1                         
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8443                                     
+  uuid: 0f2543d4-20a1-43cc-a68f-63cd75021240       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  servername: richard-parts-shaved-when.trycloudflare.com                    
+  ws-opts:
+    path: "0f2543d4-20a1-43cc-a68f-63cd75021240-vm"                             
+    headers:
+      Host: richard-parts-shaved-when.trycloudflare.com
+
+- name: 日本2-1                         
+  type: vmess
+  server: cloudflare-ech.com                        
+  port: 8880                                     
+  uuid: 0f2543d4-20a1-43cc-a68f-63cd75021240       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: richard-parts-shaved-when.trycloudflare.com                    
+  ws-opts:
+    path: "0f2543d4-20a1-43cc-a68f-63cd75021240-vm"                             
+    headers:
+      Host: richard-parts-shaved-when.trycloudflare.com 
 
 
 proxy-groups:
@@ -262,6 +369,7 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - 🇺🇲 美国无限流量节点
+      - 日本
   - name: 📹 YouTube
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -412,6 +520,8 @@ proxy-groups:
       - 美国3
       - 美国4
       - 美国5
+      - 美国1-1
+      - 美国2-1
       - 美国6
       - 美国7
       - 美国8
@@ -428,6 +538,19 @@ proxy-groups:
       - 美国无限3
       - 美国无限4
       - 美国无限5
+  - name: 日本
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 日本1
+      - 日本2
+      - 日本3
+      - 日本4
+      - 日本5
+      - 日本1-1
+      - 日本2-1
 
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
