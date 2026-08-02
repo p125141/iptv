@@ -1,4 +1,4 @@
-port: 7890
+﻿port: 7890
 socks-port: 7891
 allow-lan: true
 mode: Rule
@@ -288,13 +288,13 @@ proxies:
   idle-session-timeout: 30
   sni: www.bing.com
   skip-cert-verify: true
-
 proxy-groups:
   - name: 🚀 节点选择
-    type: url-test
+    type: select
     proxies:
       - 🇺🇲 美国节点
-      - 日本
+      - ♻️ 日本
+      - DIRECT
   - name: 📹 YouTube
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -302,8 +302,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 日本
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🤖 AI
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -311,8 +310,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 日本
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 💧 Copilot
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -320,18 +318,18 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🐬 OneDrive
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
       - DIRECT
   - name: 🪟 Microsoft
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
       - DIRECT
   - name: 🍀 Google
     type: url-test
@@ -340,7 +338,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 👨🏿‍💻 GitHub
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -348,24 +346,24 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🍎 Apple
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: ♻️ Speedtest
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🎵 TikTok
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🎥 Netflix
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -373,22 +371,23 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 📲 Telegram
-    type: url-test
+    type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 📢 FCM
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
+
       - DIRECT
   - name: 🌍 国外媒体
     type: url-test
@@ -397,19 +396,19 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🎞️ 国内媒体
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🚀 节点选择
+      - ♻️ 日本
   - name: 🐟 漏网之鱼
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -418,6 +417,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🇺🇲 美国节点
+      - ♻️ 日本
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -436,7 +436,7 @@ proxy-groups:
       - 美国10
       - 美国11
       - 美国12
-  - name: 日本
+  - name: ♻️ 日本
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
@@ -449,7 +449,6 @@ proxy-groups:
       - 日本5
       - 日本6
       - 日本7
-
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
   - DOMAIN-SUFFIX,lanzov.com,🎯 全球直连
@@ -541,7 +540,6 @@ rules:
   - DOMAIN-SUFFIX,hdslb.com,🎯 全球直连
   - DOMAIN-SUFFIX,im9.com,🎯 全球直连
   - DOMAIN-SUFFIX,smtcdns.net,🎯 全球直连
-  - DOMAIN-SUFFIX,dyttzyapi.com,🎯 全球直连
   - DOMAIN-SUFFIX,amemv.com,🎯 全球直连
   - DOMAIN-SUFFIX,bdxiguaimg.com,🎯 全球直连
   - DOMAIN-SUFFIX,bdxiguastatic.com,🎯 全球直连
@@ -566,7 +564,6 @@ rules:
   - DOMAIN-SUFFIX,huoshan.com,🎯 全球直连
   - DOMAIN-SUFFIX,huoshanzhibo.com,🎯 全球直连
   - DOMAIN-SUFFIX,ibytedapm.com,🎯 全球直连
-  - DOMAIN-SUFFIX,dytt-cinema.com,🎯 全球直连
   - DOMAIN-SUFFIX,iesdouyin.com,🎯 全球直连
   - DOMAIN-SUFFIX,ixigua.com,🎯 全球直连
   - DOMAIN-SUFFIX,kspkg.com,🎯 全球直连
@@ -990,7 +987,6 @@ rules:
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
   - DOMAIN-SUFFIX,lan,🎯 全球直连
   - DOMAIN-SUFFIX,local,🎯 全球直连
-  - DOMAIN-SUFFIX,ed.weeeg.com,🎯 全球直连
   - DOMAIN-SUFFIX,localhost,🎯 全球直连
   - IP-CIDR,0.0.0.0/8,🎯 全球直连,no-resolve
   - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
@@ -1226,7 +1222,6 @@ rules:
   - DOMAIN-SUFFIX,blogspot.co.uk,🍀 Google
   - DOMAIN-SUFFIX,blogspot.co.za,🍀 Google
   - DOMAIN-SUFFIX,blogspot.com,🍀 Google
-  - DOMAIN-SUFFIX,upaiyun.com,🍀 Google
   - DOMAIN-SUFFIX,blogspot.com.ar,🍀 Google
   - DOMAIN-SUFFIX,blogspot.com.au,🍀 Google
   - DOMAIN-SUFFIX,blogspot.com.br,🍀 Google
@@ -13696,7 +13691,6 @@ rules:
   - DOMAIN-SUFFIX,zuodao.com,🎯 全球直连
   - DOMAIN-SUFFIX,zuowen8.com,🎯 全球直连
   - DOMAIN-SUFFIX,zuowenwang.net,🎯 全球直连
-  - DOMAIN-SUFFIX,fnos.net,🎯 全球直连
   - DOMAIN-SUFFIX,zuoyebang.cc,🎯 全球直连
   - DOMAIN-SUFFIX,zuoyebang.com,🎯 全球直连
   - DOMAIN-SUFFIX,zybang.com,🎯 全球直连
