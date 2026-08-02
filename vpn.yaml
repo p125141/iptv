@@ -302,7 +302,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 日本
+      - 日本
       - 🚀 节点选择
   - name: 🤖 AI
     type: url-test
@@ -311,7 +311,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 日本
+      - 日本
       - 🚀 节点选择
   - name: 💧 Copilot
     type: url-test
