@@ -296,7 +296,7 @@ proxy-groups:
       - ♻️ 日本
       - DIRECT
   - name: 📹 YouTube
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -304,7 +304,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
   - name: 🤖 AI
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -312,7 +312,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
   - name: 💧 Copilot
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -332,7 +332,7 @@ proxy-groups:
       - ♻️ 日本
       - DIRECT
   - name: 🍀 Google
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -340,7 +340,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
   - name: 👨🏿‍💻 GitHub
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -365,7 +365,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
   - name: 🎥 Netflix
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -387,10 +387,9 @@ proxy-groups:
     proxies:
       - 🇺🇲 美国节点
       - ♻️ 日本
-
       - DIRECT
   - name: 🌍 国外媒体
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -410,7 +409,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - ♻️ 日本
   - name: 🐟 漏网之鱼
-    type: url-test
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
