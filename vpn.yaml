@@ -7,113 +7,6 @@ external-controller: :9090
 proxies:
 - name: 美国1               
   type: vless
-  server: 204.13.153.211                           
-  port: 36955                                
-  uuid: 81619024-a0c3-4601-9479-d2c49d264437   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: apple.com                 
-  reality-opts: 
-    public-key: LdHFFY8_6JIGamgc2tEIOi3Tg112MXRllc2PcxrByFM    
-    short-id: dc084d8c                      
-  client-fingerprint: chrome                  
-
-- name: 美国2                         
-  type: vmess
-  server: 204.13.153.211                        
-  port: 2095                                     
-  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: www.bing.com                    
-  ws-opts:
-    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
-    headers:
-      Host: www.bing.com                     
-
-- name: 美国3                            
-  type: hysteria2                                      
-  server: 204.13.153.211                               
-  port: 60354
-  ports: 41000-42000
-  password: 81619024-a0c3-4601-9479-d2c49d264437                          
-  alpn:
-    - h3
-  sni: www.bing.com                               
-  skip-cert-verify: true
-  fast-open: true
-
-- name: 美国4                            
-  server: 204.13.153.211                      
-  port: 47331                                    
-  type: tuic
-  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
-  password: 81619024-a0c3-4601-9479-d2c49d264437   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: www.bing.com                                
-  skip-cert-verify: true
-
-
-
-
-
-
-
-
-- name: 美国5
-  type: anytls
-  server: 204.13.153.211
-  port: 59536
-  password: 81619024-a0c3-4601-9479-d2c49d264437
-  client-fingerprint: chrome
-  udp: true
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  sni: www.bing.com
-  skip-cert-verify: true
-
-- name: 美国1-1                        
-  type: vmess
-  server: cloudflare-ech.com                        
-  port: 8443                                     
-  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  servername: composition-much-reproduce-computing.trycloudflare.com                    
-  ws-opts:
-    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
-    headers:
-      Host: composition-much-reproduce-computing.trycloudflare.com
-
-- name: 美国2-1                         
-  type: vmess
-  server: cloudflare-ech.com                        
-  port: 8880                                     
-  uuid: 81619024-a0c3-4601-9479-d2c49d264437       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: composition-much-reproduce-computing.trycloudflare.com                    
-  ws-opts:
-    path: "81619024-a0c3-4601-9479-d2c49d264437-vm"                             
-    headers:
-      Host: composition-much-reproduce-computing.trycloudflare.com 
-- name: 美国6               
-  type: vless
   server: 172.245.6.155                           
   port: 32981                                
   uuid: 948b48e5-a202-4770-8552-f35a12dac378   
@@ -127,7 +20,7 @@ proxies:
     short-id: 0fa35c77                      
   client-fingerprint: chrome                  
 
-- name: 美国7                        
+- name: 美国2                         
   type: vmess
   server: 172.245.6.155                        
   port: 2086                                     
@@ -143,7 +36,7 @@ proxies:
     headers:
       Host: www.bing.com                     
 
-- name: 美国8                            
+- name: 美国3                           
   type: hysteria2                                      
   server: 172.245.6.155                               
   port: 18687
@@ -155,7 +48,7 @@ proxies:
   skip-cert-verify: true
   fast-open: true
 
-- name: 美国9                            
+- name: 美国4                            
   server: 172.245.6.155                      
   port: 56310                                    
   type: tuic
@@ -176,7 +69,7 @@ proxies:
 
 
 
-- name: 美国10
+- name: 美国5
   type: anytls
   server: 172.245.6.155
   port: 19816
@@ -188,7 +81,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 
-- name: 美国3-1                         
+- name: 美国6                         
   type: vmess
   server: cloudflare-ech.com                        
   port: 8443                                     
@@ -198,13 +91,13 @@ proxies:
   udp: true
   tls: true
   network: ws
-  servername: sensor-starts-slight-porcelain.trycloudflare.com                    
+  servername: coastal-level-consists-brick.trycloudflare.com                    
   ws-opts:
     path: "948b48e5-a202-4770-8552-f35a12dac378-vm"                             
     headers:
-      Host: sensor-starts-slight-porcelain.trycloudflare.com
+      Host: coastal-level-consists-brick.trycloudflare.com
 
-- name: 美国4-1                         
+- name: 美国7                        
   type: vmess
   server: cloudflare-ech.com                        
   port: 8880                                     
@@ -214,87 +107,13 @@ proxies:
   udp: true
   tls: false
   network: ws
-  servername: sensor-starts-slight-porcelain.trycloudflare.com                    
+  servername: coastal-level-consists-brick.trycloudflare.com                    
   ws-opts:
     path: "948b48e5-a202-4770-8552-f35a12dac378-vm"                             
     headers:
-      Host: sensor-starts-slight-porcelain.trycloudflare.com 
+      Host: coastal-level-consists-brick.trycloudflare.com
 
-- name: 美国无限1               
-  type: vless
-  server: 108.165.176.219                           
-  port: 42034                                
-  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589   
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: apple.com                 
-  reality-opts: 
-    public-key: Swwu4iu487EC1-Nl5tUFpX8vgBAqB_bmF9w6FdEOwyU    
-    short-id: ab5efeee                      
-  client-fingerprint: chrome                  
-
-- name: 美国无限2                         
-  type: vmess
-  server: 108.165.176.219                        
-  port: 2052                                     
-  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: www.bing.com                    
-  ws-opts:
-    path: "92e5a00b-ba56-4c18-ad43-2f5df0594589-vm"                             
-    headers:
-      Host: www.bing.com                     
-
-- name: 美国无限3                            
-  type: hysteria2                                      
-  server: 108.165.176.219                               
-  port: 25914                                
-  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589                          
-  alpn:
-    - h3
-  sni: www.bing.com                               
-  skip-cert-verify: true
-  fast-open: true
-
-- name: 美国无限4                            
-  server: 108.165.176.219                      
-  port: 38889                                    
-  type: tuic
-  uuid: 92e5a00b-ba56-4c18-ad43-2f5df0594589       
-  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589   
-  alpn: [h3]
-  disable-sni: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-  sni: www.bing.com                                
-  skip-cert-verify: true
-
-
-
-
-
-
-
-
-- name: 美国无限5
-  type: anytls
-  server: 108.165.176.219
-  port: 48955
-  password: 92e5a00b-ba56-4c18-ad43-2f5df0594589
-  client-fingerprint: chrome
-  udp: true
-  idle-session-check-interval: 30
-  idle-session-timeout: 30
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 日本1               
+- name: 日本1              
   type: vless
   server: 156.246.93.6                           
   port: 60858                                
@@ -309,7 +128,7 @@ proxies:
     short-id: 49c9fcd8                      
   client-fingerprint: chrome                  
 
-- name: 日本2                        
+- name: 日本2                         
   type: vmess
   server: 156.246.93.6                        
   port: 2095                                     
@@ -370,7 +189,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 
-- name: 日本1-1                         
+- name: 日本6                         
   type: vmess
   server: cloudflare-ech.com                        
   port: 8443                                     
@@ -380,13 +199,13 @@ proxies:
   udp: true
   tls: true
   network: ws
-  servername: richard-parts-shaved-when.trycloudflare.com                    
+  servername: industries-messages-switched-bolt.trycloudflare.com                    
   ws-opts:
     path: "0f2543d4-20a1-43cc-a68f-63cd75021240-vm"                             
     headers:
-      Host: richard-parts-shaved-when.trycloudflare.com
+      Host: industries-messages-switched-bolt.trycloudflare.com
 
-- name: 日本2-1                         
+- name: 日本7                         
   type: vmess
   server: cloudflare-ech.com                        
   port: 8880                                     
@@ -396,19 +215,85 @@ proxies:
   udp: true
   tls: false
   network: ws
-  servername: richard-parts-shaved-when.trycloudflare.com                    
+  servername: industries-messages-switched-bolt.trycloudflare.com                    
   ws-opts:
     path: "0f2543d4-20a1-43cc-a68f-63cd75021240-vm"                             
     headers:
-      Host: richard-parts-shaved-when.trycloudflare.com 
+      Host: industries-messages-switched-bolt.trycloudflare.com
+- name: 美国8              
+  type: vless
+  server: 113.20.2.105                           
+  port: 38754                                
+  uuid: 554e4875-1167-4a39-aeac-77a19085929f   
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: apple.com                 
+  reality-opts: 
+    public-key: D2HBYCdBYvuYDm026j64K4sjGnPwkDEjDP2MXXST1lI    
+    short-id: b5034a6b                      
+  client-fingerprint: chrome                  
 
+- name: 美国9                         
+  type: vmess
+  server: 113.20.2.105                        
+  port: 8080                                     
+  uuid: 554e4875-1167-4a39-aeac-77a19085929f       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: www.bing.com                    
+  ws-opts:
+    path: "554e4875-1167-4a39-aeac-77a19085929f-vm"                             
+    headers:
+      Host: www.bing.com                     
+
+- name: 美国10                            
+  type: hysteria2                                      
+  server: 113.20.2.105                               
+  port: 16961
+  ports: 
+  password: 554e4875-1167-4a39-aeac-77a19085929f                          
+  alpn:
+    - h3
+  sni: www.bing.com                               
+  skip-cert-verify: true
+  fast-open: true
+
+- name: 美国11
+  server: 113.20.2.105                      
+  port: 61658                                    
+  type: tuic
+  uuid: 554e4875-1167-4a39-aeac-77a19085929f       
+  password: 554e4875-1167-4a39-aeac-77a19085929f   
+  alpn: [h3]
+  disable-sni: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+  sni: www.bing.com                                
+  skip-cert-verify: true
+
+- name: 美国12
+  type: anytls
+  server: 113.20.2.105
+  port: 54828
+  password: 554e4875-1167-4a39-aeac-77a19085929f
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  sni: www.bing.com
+  skip-cert-verify: true
 
 proxy-groups:
   - name: 🚀 节点选择
     type: url-test
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 日本
   - name: 📹 YouTube
     type: url-test
@@ -417,7 +302,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
+      - 🇺🇲 日本
       - 🚀 节点选择
   - name: 🤖 AI
     type: url-test
@@ -426,7 +311,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
+      - 🇺🇲 日本
       - 🚀 节点选择
   - name: 💧 Copilot
     type: url-test
@@ -435,20 +320,17 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🐬 OneDrive
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
   - name: 🪟 Microsoft
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
   - name: 🍀 Google
@@ -458,7 +340,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 👨🏿‍💻 GitHub
     type: url-test
@@ -467,27 +348,23 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🍎 Apple
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: ♻️ Speedtest
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎵 TikTok
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎥 Netflix
     type: url-test
@@ -496,25 +373,21 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 📲 Telegram
     type: url-test
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 📢 FCM
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎮 游戏平台
     type: select
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
       - DIRECT
   - name: 🌍 国外媒体
@@ -524,21 +397,18 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎞️ 国内媒体
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
       - 🚀 节点选择
   - name: 🐟 漏网之鱼
     type: url-test
@@ -548,7 +418,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇺🇲 美国无限流量节点
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -560,26 +429,13 @@ proxy-groups:
       - 美国3
       - 美国4
       - 美国5
-      - 美国1-1
-      - 美国2-1
       - 美国6
       - 美国7
       - 美国8
       - 美国9
       - 美国10
-      - 美国3-1
-      - 美国4-1
-  - name: 🇺🇲 美国无限流量节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 美国无限1
-      - 美国无限2
-      - 美国无限3
-      - 美国无限4
-      - 美国无限5
+      - 美国11
+      - 美国12
   - name: 日本
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -591,8 +447,8 @@ proxy-groups:
       - 日本3
       - 日本4
       - 日本5
-      - 日本1-1
-      - 日本2-1
+      - 日本6
+      - 日本7
 
 rules:
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
