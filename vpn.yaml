@@ -450,15 +450,6 @@ proxy-groups:
       - 日本7
 
 rules:
-  - RULE-SET,adguard_ads,REJECT
-  - RULE-SET,youtube_ads,REJECT
-
-  # 2. 正常的 YouTube 视频和网页流量走你的代理策略组（例如名为 🚀 节点选择 或 Proxy 的组）
-  - REJECT-DROP,DOMAIN-KEYWORD,ads.youtube.com # 深度丢弃特定广告关键词
-  - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
-  - DOMAIN-SUFFIX,googlevideo.com,🚀 节点选择
-  
-  # 3. 你原本的其他规则留在下方...
   - GEOIP,CN,DIRECT
   - MATCH,🚀 节点选择
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
