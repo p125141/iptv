@@ -448,7 +448,6 @@ proxy-groups:
       - 日本5
       - 日本6
       - 日本7
-
 rules:
   - GEOIP,CN,DIRECT
   - MATCH,🚀 节点选择
