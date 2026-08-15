@@ -588,9 +588,6 @@ rules:
   - RULE-SET,youtube,🍀 Google
   - RULE-SET,netflix,🍀 Google
   - RULE-SET,netflixcidr,🍀 Google,no-resolve
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,tld-not-cn,PROXY
   - RULE-SET,telegramcidr,PROXY,no-resolve
   - RULE-SET,tiktok,PROXY
   - RULE-SET,proxy,PROXY
