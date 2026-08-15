@@ -449,11 +449,6 @@ proxy-groups:
       - 日本6
       - 日本7
 rules:
-  - RULE-SET,adguard_ads,REJECT
-  - RULE-SET,youtube_ads,REJECT
-  - REJECT-DROP,DOMAIN-KEYWORD,ads.youtube.com
-  - DOMAIN-SUFFIX,youtube.com,📹 YouTube
-  - DOMAIN-SUFFIX,googlevideo.com,📹 YouTube
   - GEOIP,CN,DIRECT
   - MATCH,🚀 节点选择
   - DOMAIN-SUFFIX,time.windows.com,🎯 全球直连
